@@ -54,7 +54,7 @@
   IBOutlet NSTableView                  *ivFrameTableView;
   IBOutlet NSArrayController            *ivFrameContentArray;
   
-  IBOutlet IVParameterController        *ivParameterController;
+  IBOutlet IVParameterController        *__weak ivParameterController;
 }
 
 @property pprng::Gen5PIDFrameGenerator::FrameType  encounterFrameType;
@@ -72,7 +72,7 @@
 @property uint32_t  cgearStartOffset;
 
 @property uint32_t   minIVFrame, maxIVFrame;
-@property (readonly) IVParameterController  *ivParameterController;
+@property (weak, readonly) IVParameterController  *ivParameterController;
 
 - (IBAction)generatePIDFrames:(id)sender;
 - (IBAction)generateIVFrames:(id)sender;

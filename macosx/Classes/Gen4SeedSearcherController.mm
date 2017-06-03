@@ -197,6 +197,11 @@ struct ProgressHandler
   self.maxDelay = 750;
 }
 
+- (int)mode
+{
+    return mode;
+}
+
 - (void)setMode:(int)newMode
 {
   if (newMode != mode)
@@ -248,7 +253,8 @@ struct ProgressHandler
     
     for (i = 0; i < numItems; ++i)
     {
-      NSMenuItem  *item = [sender itemAtIndex: i];
+      NSMenuItem  *item = (NSMenuItem *)([sender itemAtIndex: i]);
+        
       NSInteger   tag = [item tag];
       
       if (tag >= 0)

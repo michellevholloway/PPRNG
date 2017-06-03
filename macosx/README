@@ -1,18 +1,16 @@
-PPRNG 1.15.0
-
-IMPORTANT NOTICE:
-Barring any critical bug fixes, this is the last version of PPRNG that will
-support OS X 10.5, also making it the last version that supports PPC.  Thank you
-for your understanding.
+PPRNG 1.15.1
 
 Mac Requirements:
-Intel or PPC Mac with OS X 10.5 or greater.
+Intel Mac with OS X 10.7 or greater.
 
 DS Requirements:
 All DS types are supported for English, Japanese, French, German, Italian, and
 Spanish language Black, White, Black 2, and White 2, as well as Korean White 2.
 Only DS and DS Lite are supported for Korean Black, White, and Black 2 at this
 time.
+
+New in 1.15.1
+* Fixed Objective-C garbage collection issue so app can run in 10.12 and beyond (because of this now min requirement to run is 10.7)
 
 
 New in 1.15.0

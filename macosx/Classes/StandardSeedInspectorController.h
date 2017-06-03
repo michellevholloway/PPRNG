@@ -28,22 +28,22 @@
 
 @interface StandardSeedInspectorController : HashedSeedInspectorController
 {
-  IBOutlet HashedSeedInspectorFramesTabController     *framesTabController;
+  IBOutlet HashedSeedInspectorFramesTabController     *__weak framesTabController;
   
-  IBOutlet HashedSeedInspectorAdjacentsTabController  *adjacentsTabController;
+  IBOutlet HashedSeedInspectorAdjacentsTabController  *__weak adjacentsTabController;
   
-  IBOutlet HashedSeedInspectorEggsTabController       *eggsTabController;
+  IBOutlet HashedSeedInspectorEggsTabController       *__weak eggsTabController;
   
   NSString  *selectedTabId;
 }
 
 @property (copy) NSString  *selectedTabId;
 
-@property (readonly)
+@property (weak, readonly)
   HashedSeedInspectorFramesTabController *framesTabController;
-@property (readonly)
+@property (weak, readonly)
   HashedSeedInspectorAdjacentsTabController *adjacentsTabController;
-@property (readonly)
+@property (weak, readonly)
   HashedSeedInspectorEggsTabController *eggsTabController;
 
 @end

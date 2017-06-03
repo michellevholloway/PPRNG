@@ -35,7 +35,7 @@
   
   uint32_t  minIVFrame, maxIVFrame;
   
-  IBOutlet IVParameterController  *ivFrameParameterController;
+  IBOutlet IVParameterController  *__weak ivFrameParameterController;
   
   IBOutlet NSTableView            *ivFrameTableView;
   IBOutlet NSArrayController      *ivFrameContentArray;
@@ -54,7 +54,7 @@
   uint32_t  adjacentsDelayVariance, adjacentsTimeVariance;
   uint32_t  adjacentsMinIVFrame, adjacentsMaxIVFrame;
   
-  IBOutlet IVParameterController  *adjacentsIVParameterController;
+  IBOutlet IVParameterController  *__weak adjacentsIVParameterController;
   
   IBOutlet NSTableView            *adjacentsTableView;
   IBOutlet NSArrayController      *adjacentsContentArray;
@@ -79,7 +79,7 @@
 @property (copy) NSNumber  *seed, *baseDelay;
 
 @property uint32_t  minIVFrame, maxIVFrame;
-@property IVParameterController  *ivFrameParameterController;
+@property (weak) IVParameterController  *ivFrameParameterController;
 
 - (IBAction)generateIVFrames:(id)sender;
 
@@ -95,7 +95,7 @@
 
 @property uint32_t  adjacentsDelayVariance, adjacentsTimeVariance;
 @property uint32_t  adjacentsMinIVFrame, adjacentsMaxIVFrame;
-@property IVParameterController  *adjacentsIVParameterController;
+@property (weak) IVParameterController  *adjacentsIVParameterController;
 
 - (IBAction)generateAdjacents:(id)sender;
 - (IBAction)findAdjacent:(id)sender;
